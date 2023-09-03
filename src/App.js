@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState, useRef} from 'react';
+import {Route, Routes, useNavigate} from 'react-router';
+import Home from './Home';
+import GenLyrics from './GenLyrics';
+import SongPage from './SongPage';
+import {Button, Form} from 'react-bootstrap';
 
 function App() {
+
+  const [uploadedFileName, setUploadedFileName] = useState(null);
+  const [recipient, setRecipient] = useState("");
+  const [gender, setGender] = useState("");
+  const [occasion, setOccasion] = useState("");
+  const [manager, setManager] = useState("");
+  const [team, setTeam] = useState("");
+  const [genre, setGenre] = useState("");
+  const [singer, setSinger] = useState("");
+
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Routes>
+      <Route path='/generateSong' element={<GenLyrics />}></Route>
+      <Route path='/' element={<Home />}></Route>
+      <Route path='/generateSong/song' element={<SongPage />}></Route>
+    </Routes>
     </div>
   );
-}
+};
 
 export default App;
