@@ -8,17 +8,6 @@ import {Button, Form} from 'react-bootstrap';
 
 function App() {
 
-  const [uploadedFileName, setUploadedFileName] = useState(null);
-  const [recipient, setRecipient] = useState("");
-  const [gender, setGender] = useState("");
-  const [occasion, setOccasion] = useState("");
-  const [manager, setManager] = useState("");
-  const [team, setTeam] = useState("");
-  const [genre, setGenre] = useState("");
-  const [singer, setSinger] = useState("");
-
-
-
 
 
   return (

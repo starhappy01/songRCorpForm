@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import {Route, Routes, useNavigate} from 'react-router';
+import {useNavigate} from 'react-router';
 import { FormControl, Select, Input, Button, FormLabel } from '@chakra-ui/react'
 
 
@@ -50,24 +50,24 @@ const Home = () => {
 
       <FormControl>
         <FormLabel>Who is this for?</FormLabel>
-        <Input type="text" placeholder="Recipient" />
+        <Input isRequired type="text" placeholder="Recipient" />
 
       
-      <Select placeholder='Gender'>
+      <Select isRequired placeholder='Gender'>
   <option value='male'>Male</option>
   <option value='female'>Female</option>
   <option value='other'>Other</option>
 </Select>
-<Select placeholder='What is the occasion?'>
+<Select isRequired placeholder='What is the occasion?'>
   <option value='anniversary'>Anniversary</option>
   <option value='promotion'>Promotion</option>
   <option value='birthday'>Birthday</option>
 </Select>
 
         <FormLabel>Manager</FormLabel>
-        <Input type="text" placeholder="Manager name" />
+        <Input isRequired type="text" placeholder="Manager name" />
         <FormLabel>Team Name</FormLabel>
-        <Input type="text" placeholder="Team name" />
+        <Input isRequired type="text" placeholder="Team name" />
 
 
       <FormLabel>Image Upload:</FormLabel>
@@ -86,7 +86,7 @@ const Home = () => {
         {uploadedFileName ? uploadedFileName : "Upload"}
       </button>
       <FormLabel>Genre</FormLabel>
-      <Select placeholder='Select a genre'>
+      <Select isRequired placeholder='Select a genre'>
   <option value='pop'>Pop</option>
   <option value='rock'>Rock</option>
   <option value='country'>Country</option>
@@ -94,7 +94,7 @@ const Home = () => {
 </Select>
 
 <FormLabel>Singer</FormLabel>
-<Select placeholder='Select a singer'>
+<Select isRequired placeholder='Select a singer'>
   <option value='emily'>Emily</option>
   <option value='kevin'>Kevin</option>
   <option value='katie'>Katie</option>
